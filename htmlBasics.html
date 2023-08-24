@@ -1,0 +1,302 @@
+<!--
+HTML (HyperText Markup Language), web sayfalarını oluşturmak için kullanılan bir işaretleme dilidir.
+HTML, web sayfalarını oluşturmanın temel taşıdır ve tarayıcılar tarafından yorumlanarak görüntülenir. 
+Sayfa içeriğini organize etmek, bağlantılar oluşturmak, medya eklemek ve daha fazlasını yapmak için kullanılır.
+
+Yapılandırma: HTML, web sayfalarının yapısını tanımlamak için kullanılır. Metin, resimler, bağlantılar, tablolar ve diğer içeriklerin nasıl düzenleneceği belirtilir.
+
+Etiketler: HTML, etiketler aracılığıyla içeriği işaretler. Her etiket açılış (<etiket>) ve kapanış (</etiket>) olmak üzere çift olarak kullanılır. Örneğin, <p> etiketi bir paragrafı belirtir.
+
+Bağlantılar: <a> etiketi, bağlantıları oluşturur. Bu etiket sayesinde diğer web sayfalarına veya dosyalara yönlendirme yapılabilir.
+
+Resimler: <img> etiketi, resimleri sayfaya eklemek için kullanılır. "src" özelliği ile resmin kaynağı belirtilir.
+
+Başlık ve Başlık Seviyeleri: HTML başlık etiketleri (<h1> - <h6>), sayfanın veya bölümlerinin başlıklarını belirlemek için kullanılır. <h1> en yüksek seviyeli başlığı temsil eder.
+
+Listeler: Sırasız ve sıralı listeler oluşturmak için <ul> (unordered list) ve <ol> (ordered list) etiketleri kullanılır. Listeye ait öğeler <li> etiketi ile belirtilir.
+
+Formlar: <form> etiketi, kullanıcı girişi almak veya veri göndermek için kullanılır. Text kutuları, onay kutuları, radyo düğmeleri gibi giriş alanlarını içerebilir.
+
+Stil ve Görünüm: HTML içeriği, CSS (Cascading Style Sheets) ile biçimlendirilir. CSS, renkler, yazı tipi, boyutlar ve düzen gibi stil özelliklerini kontrol eder.
+
+Semantik Öğeler: HTML5 ile birlikte, semantik etiketler (örneğin <header>, <nav>, <section>, <footer>) sayfa yapısını ve içeriğini daha anlamlı bir şekilde tanımlamak için kullanılır.
+-->
+
+<!--
+HTML, genel olarak case insensitive (büyük-küçük harf duyarsız) bir dildir, yani HTML etiketleri ve özellikleri, 
+büyük ve küçük harf farkı gözetmeksizin aynı şekilde çalışır. 
+Yani, <p>, <P>, <P>, veya <p> gibi yazılan tüm etiketler aynıdır ve aynı şekilde yorumlanır.
+-->
+
+<!--
+HTML'de etiketler arasındaki boşluklar (space), genellikle önemli değildir ve boşluklar olarak kabul edilir. 
+HTML, etiketler arasında birkaç boşluk veya satır sonu eklemenize izin veren bir işaretleme dilidir. 
+Tarayıcı genellikle ardışık boşlukları, sekme karakterlerini (tab), ve satır sonlarını bir boşluk olarak birleştirir.
+
+<p>Bu bir   metindir.</p>
+Tarayıcı, "Bu bir metindir." metnini görüntülerken, "Bu bir metindir." şeklinde birleştirir ve fazla boşlukları göz ardı eder.
+
+!! Bazı durumlarda, satır içi elementler arasındaki boşluklar düzen veya stil üzerinde etkili olabilir. 
+Örneğin, <span> gibi satır içi elementler arasındaki boşluklar görünür boşluklar olarak kalabilir.
+
+Metni HTML kaynak kodundaki gibi tam olarak görüntülemek istiyorsanız (örneğin, kod örnekleri için), <pre> elementini kullanabilirsiniz. 
+<pre> elementi içindeki boşluklar ve satır sonları önemlidir ve kaynak kodundaki gibi görüntülenir.
+
+<script> ve <style> etiketleri içindeki boşluklar ve satır sonları önemlidir, çünkü bunlar betiklerin ve stillerin bir parçasıdır. 
+Ekstra boşluklar veya satır sonları betiklerin veya stillerin davranışını veya görünümünü etkileyebilir.
+-->
+
+<!--
+Boilerplate, genelde tekrar eden ve temel bir yapıyı ifade eden terimdir.
+Web geliştirmede, "boilerplate" terimi genellikle temel HTML, CSS ve bazen JavaScript kodunu içeren bir başlangıç şablonunu ifade eder. 
+Bu şablonlar, tipik olarak sayfa yapısını, stilleri ve bazen önceden tanımlanmış bileşenleri içerir. 
+Geliştiriciler, bu boilerplate kodlarını kendi projelerine uyarlayarak daha hızlı bir başlangıç yapabilirler.
+-->
+
+<!--
+HTML içindeki temel yapı taşları "HTML etiketleri" ve "HTML öğeleri" olarak adlandırılır.  
+Bir etiket, bir öğenin temel bileşenidir ve öğeler web sayfalarını oluşturmak için kullanılır.
+
+1-) HTML Etiketleri (HTML Tags):
+
+HTML etiketleri, içeriğin nasıl görüntüleneceğini ve tarayıcının içeriği nasıl işlemesi gerektiğini belirten işaretleme öğeleridir. HTML etiketleri açılış (<etiket>) ve kapanış (</etiket>) biçiminde kullanılırlar. Etiketler genellikle içerikleri arasına alınır ve içerik bu etiketlerin içinde görüntülenir.
+
+Örneğin:
+<p>Bu bir paragraf örneğidir.</p>
+<a href="https://www.example.com">Örnek bir bağlantı</a>
+
+Yukarıdaki örnekte, <p> ve </p> etiketleri bir paragraf oluştururken, <a> ve </a> etiketleri bir bağlantı (link) oluşturur.
+
+2-) HTML Öğeleri (HTML Elements):
+
+HTML öğeleri, etiketlerin ve içeriklerinin birleşimi olarak düşünülebilir. Bir HTML öğesi, açılış etiketi, içerik ve kapanış etiketi içerebilir. Öğenin tamamı, bir etiket ile içerik arasındaki ilişkiyi ifade eder.
+
+Örneğin:
+<p>Bu bir paragraf örneğidir.</p>
+
+Yukarıdaki örnekte <p> etiketi ile </p> etiketi arasındaki tüm yapı, bir "paragraf öğesi" olarak adlandırılır. İçerik (metin) <p> ve </p> etiketleri arasında bulunur.
+-->
+
+<!--
+HTML etiketleri iki türde olabilir: normal etiketler (opening-closing tags) ve kendiliğinden kapanan etiketler (self-closing tags). 
+
+1-) Normal Etiketler (Opening-Closing Tags):
+
+Normal etiketler, içeriğin belirli bir başlangıç ve bitiş noktası olduğu durumlar için kullanılır. 
+Bu tür etiketler genellikle içeriği etiket arasına alır ve içeriği tanımlar. Açılış etiketi ve kapanış etiketi şeklinde iki bölümden oluşurlar.
+
+Örnek normal etiket:
+<p>Bu bir paragraf örneğidir.</p>
+
+Yukarıdaki örnekte <p> açılış etiketi ve </p> kapanış etiketi arasındaki metin, bir paragraf etiketi oluşturur.
+
+2-) Kendiliğinden Kapanan Etiketler (Self-Closing Tags):
+
+Kendiliğinden kapanan etiketler, metin ya da içerik olmadan, genellikle bir belirteç veya öğe için kullanılır. 
+Bu tür etiketlerde sadece bir açılış etiketi bulunur ve bir kapanış etiketi yoktur. 
+Genellikle boş elemanlar veya gömülü içeriğe sahip olmayan öğeler için kullanılır.
+
+Örnek kendiliğinden kapanan etiket:
+<img src="resim.jpg" alt="Bir Resim">
+
+Yukarıdaki örnekte <img> etiketi bir resmi temsil eder ve içeriği yoktur. src ve alt gibi niteliklerle ilgili bilgileri içerir.
+
+Kendiliğinden kapanan etiketler, XHTML gibi daha sıkı XML tabanlı dillerde gereklidir. 
+HTML5'de, bazı etiketler (örneğin, <img>, <br>, <input>) kendiliğinden kapanan olarak kabul edilir, bu nedenle kapanış etiketi yazmak zorunlu değildir.
+
+>>extra not>>
+XML, veri taşıma ve depolama için tasarlanmış bir metin formatıdır. 
+HTML gibi bir işaretleme dili olmasına rağmen, içeriğin yapısını tanımlamak ve verileri yapılandırmak için kullanılır. 
+Özellikle web servisleri, veri alışverişi, konfigürasyon dosyaları, veritabanı dökümantasyonu ve daha birçok alanda kullanılır.
+
+XHTML, XML tabanlı bir HTML sürümüdür. 
+HTML ile aynı yapıya sahiptir, ancak daha katı bir XML sözdizimine uyar. 
+Bu, web sayfalarının daha tutarlı ve doğru bir şekilde işlenmesini sağlar.
+
+XHTML, HTML'nin özelliklerini XML'in katı yapısal kurallarıyla birleştirir. 
+XHTML belgeleri, büyük/küçük harfe duyarlıdır ve tüm etiketler düzgün bir şekilde kapatılmalıdır. 
+
+Özetle, XML veri taşıma ve depolama için bir metin formatıdır, 
+XHTML ise web sayfalarını oluşturmak için XML tabanlı bir HTML sürümüdür. 
+Her ikisi de belgelerin yapısını düzenlemek ve verileri düzenlemek için kullanılır.
+>>>>>>>>>>>
+
+--- Normal Etiketler Örnekleri: ------------------------------------
+
+<p> (Paragraf):
+<p>Bu bir paragraf örneğidir.</p>
+
+<h1> (Başlık 1):
+<h1>Bu bir başlık örneğidir.</h1>
+
+<div> (Bölüm):
+<div>
+    <p>Bu bir div içindeki paragraf örneğidir.</p>
+</div>
+
+<span> (İnceleme):
+<p>Bu bir <span>özel</span> kelime içeren paragraf örneğidir.</p>
+
+<strong> (Kalın):
+<p><strong>Bu metin kalın olarak vurgulanmıştır.</strong></p>
+
+--- Kendiliğinden Kapanan Etiketler Örnekleri: ----------------------
+
+<img> (Resim):
+<img src="resim.jpg" alt="Bir Resim">
+
+<input> (Giriş):
+<input type="text" name="username" placeholder="Kullanıcı Adı">
+
+<meta> (Meta Bilgisi):
+<meta charset="UTF-8">
+
+<link> (Bağlantı):
+<link rel="stylesheet" href="stil.css">
+
+!! kendiliğinden kapanan etiketlerin içerisine yazı koyamayız
+
+hatalı yazım => <img src="resim.jpg" alt="Bir Resim" <p> some text </p> > 
+
+Bir Resim some text
+>
+
+gibi bir çıktı verir
+-->
+
+
+<!--
+Bu şekilte container yapamayız, iki yazı da alt alta yazılır, bunun için farklı yöntemler var.
+<p> some text 
+    <p> more text 
+  </p> 
+  </p> 
+
+<div> (kısaltması "division" yani "bölüm" anlamına gelir) HTML etiketi, bir web sayfasındaki içeriği gruplamak veya düzenlemek için kullanılan çok yaygın bir etikettir. 
+Genellikle CSS ile birlikte kullanılır ve sayfanın stilini uygulamak için kullanılır.
+
+<div>
+    <h2>Örnek Başlık</h2>
+    <p>Bu bir örnek paragraf.</p>
+    <img src="resim.jpg" alt="Bir Resim">
+    <div> İkinci div </div>
+  <div> Üçüncü div 
+  <p>İkinci Başlık</p>
+  </div>
+    
+</div>
+
+Faydalı harika bir kaynak:
+https://codepen.io/zg_dev/pen/poEYBXm
+
+Mozilla'nın kendi harika kaynağı:
+https://developer.mozilla.org/en-US/docs/Web/HTML
+
+
+-->
+
+
+<!--
+HTML'deki <a> etiketi bir bağlantı (link) oluşturmak için kullanılır. 
+"A" kelimesi "anchor" kelimesinin kısaltmasıdır ve web sayfalarında diğer sayfalara veya kaynaklara bağlantılar oluşturmak için kullanılır. 
+<a> etiketi, href (hypertext reference) özelliği ile hedef kaynağın yolu veya adresi belirtilir. Bu, kullanıcıların tıkladığında nereye yönlendirileceğini belirler. 
+
+<a href="https://www.example.com">Örnek Web Sitesi</a>
+<a href="belge.pdf">Örnek Belge (PDF)</a>
+<a href="mailto:ornek@example.com">Bize E-posta Gönder</a>
+
+<a href="#bolum1">Bölüm 1'e Git</a>
+<h2 id="bolum1">Bölüm 1 Başlık</h2>
+
+-->
+
+
+<!--
+<span> HTML etiketi, metin veya içerik üzerine ekstra stiller veya işlevsellik eklemek için kullanılan bir içerik işaretleme etiketidir. 
+<span> etiketi, özel bir görüntüsü veya yapısı olmayan, yalnızca metin veya içerik üzerinde işlem yapmanız gerektiğinde kullanışlıdır.
+
+1-) Metin veya İçerik İşaretleme: 
+<span> etiketi, metin veya içerik üzerine herhangi bir işaretleme eklemek için kullanılır. 
+Özellikle CSS ile bu işaretleme üzerine stil uygulamak için yaygın olarak kullanılır.
+
+<p>Bu bir <span style="color: red; font-weight: bold;">kırmızı ve kalın</span> metindir.</p>
+
+2-) İç İçe Kullanım: 
+<span> etiketini metin içinde veya diğer etiketler içinde kullanabilirsiniz. 
+Özellikle belirli bir metin parçasını vurgulamak veya stillemek için iç içe kullanışlıdır.
+
+<p>Bu bir <span style="font-style: italic;">italik</span> metindir.</p>
+
+3-) CSS Sınıfları ile Kullanım: 
+<span> etiketi yerine, CSS sınıflarını kullanarak içerikleri stillemek daha yaygın bir uygulamadır. 
+Bu, HTML ve CSS'i daha temiz ve bakımı daha kolay hale getirir.
+
+<p>Bu bir <span class="kirmizi-kalın">kırmızı ve kalın</span> metindir.</p>
+
+CSS dosyasında bu sınıfa ilişkin stil kurallarını tanımlayabilirsiniz:
+
+.kirmizi-kalın {
+    color: red;
+    font-weight: bold;
+}
+
+-->
+
+<!--
+HTML'de class kullanımı, CSS (Cascading Style Sheets) ile belirli bir öğenin veya öğeler grubunun stili veya görünümü üzerinde daha fazla kontrol sağlar. 
+class özelliği, HTML öğelerine özgüdür ve bir öğeye birden fazla sınıf atanabilir.
+
+class özelliğini bir HTML öğesine eklemek için, öğenin etiketi içinde class özelliğini kullanın.
+
+<p class="bilgi-metni">Bu bir bilgi metnidir.</p>
+<p> Some text <span class="bilgi-metni">Bu bir bilgi metnidir. </span></p>
+<p class="bilgi-metni vurgula">Bu da vurgulanmış bir bilgi metnidir.</p>
+
+CSS dosyanızda, belirlediğiniz sınıflara göre stil tanımlayabilirsiniz. Sınıf adları, CSS selektörlerinde nokta (.) ile başlatılır.
+
+.bilgi-metni {
+    color: #333; /* Metin rengi gri */
+    font-size: 16px; /* Metin boyutu 16 piksel */
+}
+
+.vurgula {
+    background-color: yellow; /* Arkaplan rengi sarı */
+    font-weight: bold; /* Kalın yazı tipi */
+}
+
+
+-->
+
+
+
+<!--
+HTML'de "global attributes" ve "specific attributes" (spesifik özellikler) olmak üzere iki tür özellik bulunur. 
+Bu özellikler, HTML etiketlerine eklenen niteliklerdir ve her birinin farklı kullanım amaçları vardır.
+
+*** Global Attributes (Genel Özellikler):
+
+Global özellikler, hemen hemen tüm HTML etiketlerine uygulanabilen ve genel kullanım için tasarlanmış özelliklerdir. Bu özellikler, aşağıdaki gibi HTML etiketlerinin çoğunda kullanılabilir:
+
+class: Bir öğeye sınıf adı verir, CSS ile öğeleri hedeflemek ve stillendirmek için kullanılır.
+id: Bir öğeye benzersiz bir tanımlayıcı ekler.
+style: Inline stil tanımlar, yani bir öğenin stilini doğrudan HTML içinde belirler.
+title: Bir öğenin açıklamasını veya ek bilgiyi tanımlar.
+lang: Bir öğenin dilini belirtir.
+data-*: Özel veri özelliklerini tanımlar ve özelleştirilmiş veri saklamak için kullanılır.
+Örnek olarak, class, id, ve style genel özelliklerdir ve birçok HTML etiketinde kullanılabilir.
+
+*** Specific Attributes (Spesifik Özellikler):
+
+Spesifik özellikler, belirli HTML etiketlerine özgüdür ve yalnızca belirli etiketlerde kullanılır. Örneğin:
+
+<a> etiketi için href özelliği, bağlantıların hedefini belirtir.
+<img> etiketi için src özelliği, görüntünün kaynak dosyasının yolunu belirtir.
+<input> etiketi için type özelliği, giriş alanının türünü belirtir (örneğin, metin, şifre, vb.).
+<table> etiketi için border özelliği, tablonun kenarlık kalınlığını belirtir.
+Bu özellikler, belirli etiketlerle sınırlıdır ve sadece bu etiketlerle ilgili işlevselliği sağlar. 
+Yani, <a> etiketinin href özelliği yalnızca bağlantılarla ilgilidir ve başka bir etiketle kullanılamaz.
+
+Genel olarak, global özellikler daha genel amaçlar için kullanılırken, spesifik özellikler belirli etiketlerle ilişkilendirilmiş özel işlevselliği sağlamak için kullanılır. 
+Bu nedenle, hangi özelliğin kullanılacağı, hangi etiketi kullanıyorsanız ve ne tür bir işlevselliği sağlamak istediğinize bağlı olarak değişir.
+
+-->
